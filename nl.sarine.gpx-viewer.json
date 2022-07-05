@@ -1,7 +1,7 @@
 {
     "app-id" : "nl.sarine.gpx-viewer",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "40",
+    "runtime-version" : "42",
     "sdk" : "org.gnome.Sdk",
     "command" : "gpx-viewer",
     "rename-desktop-file" : "gpx-viewer.desktop",
