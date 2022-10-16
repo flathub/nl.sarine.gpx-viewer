@@ -1,7 +1,7 @@
 {
     "app-id" : "nl.sarine.gpx-viewer",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "42",
+    "runtime-version" : "43",
     "sdk" : "org.gnome.Sdk",
     "command" : "gpx-viewer",
     "rename-desktop-file" : "gpx-viewer.desktop",
@@ -70,7 +70,7 @@
                 {
                     "type" : "git",
                     "url" : "https://github.com/DaveDavenport/gpx-viewer",
-                    "tag" : "0.4.0"
+                    "tag" : "0.5.0"
                 }
             ]
         }
