@@ -1,12 +1,13 @@
 {
     "app-id" : "nl.sarine.gpx-viewer",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "43",
+    "runtime-version" : "46",
     "sdk" : "org.gnome.Sdk",
     "command" : "gpx-viewer",
     "rename-desktop-file" : "gpx-viewer.desktop",
     "rename-appdata-file" : "gpx-viewer.metainfo.xml",
     "rename-icon" : "gpx-viewer",
+    "copy-icon": true,
     "finish-args" : [
         "--share=ipc",
         "--socket=fallback-x11",
@@ -18,17 +19,19 @@
     "cleanup" : [
         "/include",
         "/lib/pkgconfig",
-        "/share/pkgconfig",
-        "/share/aclocal",
         "/man",
-        "/share/man",
+        "/share/aclocal",
+        "/share/gir-1.0",
         "/share/gtk-doc",
+        "/share/man",
+        "/share/pkgconfig",
         "/share/vala",
         "*.la",
         "*.a"
     ],
     "modules" : [
         "shared-modules/clutter/clutter.json",
+        "shared-modules/libsoup/libsoup-2.4.json",
         {
             "name": "libchamplain",
             "buildsystem": "meson",
@@ -71,6 +74,10 @@
                     "type" : "git",
                     "url" : "https://github.com/DaveDavenport/gpx-viewer",
                     "tag" : "0.5.0"
+                },
+                {
+                    "type" : "patch",
+                    "path" : "fix_appdata.patch"
                 }
             ]
         }
