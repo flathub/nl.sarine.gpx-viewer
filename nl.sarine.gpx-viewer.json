@@ -1,14 +1,14 @@
 {
-    "app-id" : "nl.sarine.gpx-viewer",
-    "runtime" : "org.gnome.Platform",
-    "runtime-version" : "46",
-    "sdk" : "org.gnome.Sdk",
-    "command" : "gpx-viewer",
-    "rename-desktop-file" : "gpx-viewer.desktop",
-    "rename-appdata-file" : "gpx-viewer.metainfo.xml",
-    "rename-icon" : "gpx-viewer",
+    "app-id": "nl.sarine.gpx-viewer",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "46",
+    "sdk": "org.gnome.Sdk",
+    "command": "gpx-viewer",
+    "rename-desktop-file": "gpx-viewer.desktop",
+    "rename-appdata-file": "gpx-viewer.metainfo.xml",
+    "rename-icon": "gpx-viewer",
     "copy-icon": true,
-    "finish-args" : [
+    "finish-args": [
         "--share=ipc",
         "--socket=fallback-x11",
         "--socket=wayland",
@@ -16,7 +16,7 @@
         "--share=network",
         "--filesystem=home"
     ],
-    "cleanup" : [
+    "cleanup": [
         "/include",
         "/lib/pkgconfig",
         "/man",
@@ -29,7 +29,7 @@
         "*.la",
         "*.a"
     ],
-    "modules" : [
+    "modules": [
         "shared-modules/clutter/clutter.json",
         "shared-modules/libsoup/libsoup-2.4.json",
         {
@@ -41,8 +41,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/libchamplain/0.12/libchamplain-0.12.20.tar.xz",
-                    "sha256": "0232b4bfcd130a1c5bda7b6aec266bf2d06e701e8093df1886f1e26bc1ba3066",
+                    "url": "https://download.gnome.org/sources/libchamplain/0.12/libchamplain-0.12.21.tar.xz",
+                    "sha256": "a915cd172a0c52944c5579fcb4683f8a878c571bf5e928254b5dafefc727e5a7",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "libchamplain"
@@ -53,7 +53,7 @@
         "shared-modules/intltool/intltool-0.51.json",
         {
             "name": "gdl",
-            "cleanup" : [
+            "cleanup": [
                 "/include",
                 "/lib/pkgconfig"
             ],
@@ -66,18 +66,18 @@
             ]
         },
         {
-            "name" : "gpx-viewer",
-            "buildsystem" : "meson",
-            "builddir" : true,
-            "sources" : [
+            "name": "gpx-viewer",
+            "buildsystem": "meson",
+            "builddir": true,
+            "sources": [
                 {
-                    "type" : "git",
-                    "url" : "https://github.com/DaveDavenport/gpx-viewer",
-                    "tag" : "0.5.0"
+                    "type": "git",
+                    "url": "https://github.com/DaveDavenport/gpx-viewer",
+                    "tag": "0.5.0"
                 },
                 {
-                    "type" : "patch",
-                    "path" : "fix_appdata.patch"
+                    "type": "patch",
+                    "path": "fix_appdata.patch"
                 }
             ]
         }
