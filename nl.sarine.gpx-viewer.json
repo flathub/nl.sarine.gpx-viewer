@@ -18,6 +18,7 @@
     ],
     "cleanup" : [
         "/include",
+        "/lib/girepository-1.0",
         "/lib/pkgconfig",
         "/man",
         "/share/aclocal",
@@ -56,10 +57,6 @@
             "build-options": {
                 "cflags": "-Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types"
             },
-            "cleanup": [
-                "/include",
-                "/lib/pkgconfig"
-            ],
             "sources": [
                 {
                     "type": "archive",
